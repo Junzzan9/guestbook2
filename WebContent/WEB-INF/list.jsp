@@ -54,11 +54,8 @@ List<GuestBookVo> gbList = (List<GuestBookVo>) request.getAttribute("gbList");
 			<td><%=gbList.get(i).getNo()%></td>
 			<td><%=gbList.get(i).getName()%></td>
 			<td><%=gbList.get(i).getDate()%></td>
-			<td><form action="/guestbook2/gbc" method="get">
-					<input type="hidden" name="action" value="dform"> <input
-						type="hidden" name="dId" value="<%=gbList.get(i).getNo()%>">
-					<button type="submit">[삭제]</button>
-				</form></td>
+			<td>
+			<a href="/guestvook2/gbc?action=dform&dId=<%=gbList.get(i).getNo()%>">[삭제]</a></td>
 		</tr>
 		<tr>
 			<td colspan="4"><%=gbList.get(i).getContent()%></td>
